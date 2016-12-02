@@ -1,18 +1,36 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-<link rel="stylesheet" href="totaalbedrag.css">
-
-    
+<link rel="stylesheet" href="totaalbedrag.css"> 
 </head>
 <body>
     
-   
+<div id="div1">Bedrag per stuk: <input required type="text" id="voeg1" ></div>
     
+<br>
+    
+<div id="div2">Aantal: <input required type="text" id="voeg2"></div>
+    
+<br>    
+    
+<button onclick="klikHier()">Bereken</button>
+    
+<div id="resultaat2"></div>     
 <script>
     
+function klikHier() {
+   
+var resultaat = document.getElementById('voeg1').value * document.getElementById('voeg2').value;
+
+"<br />"
+document.getElementById('resultaat2').innerHTML = "Het totaal bedrag is: " + resultaat.toFixed(2);
+        
     
-    
+//document.write('<br />Het totaalbedrag is: ' + resultaat.toFixed(2));   
+
+}
+
+
     
     
 </script>    
